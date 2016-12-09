@@ -12,4 +12,4 @@ echo "stats for $DAY $TIME" >> $FILENAME
 
 git add .
 git commit -m "stats for $DAY"
-git push
+#git push
