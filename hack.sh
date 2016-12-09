@@ -15,7 +15,7 @@ if [$DAY = $UPDATED]
 then
   echo "stats already hacked for today"
 else
-  echo "Last update was $UPDATED  and we are $DATE ..."
+  echo "Last update was $UPDATED  and we are $DAY ..."
   touch $FILENAME 
   echo "stats for $DAY $TIME" >> $FILENAME
   git add .
