@@ -1,4 +1,8 @@
 #!/bin/sh
+CLS='\033c'
+BLUE='\033[0;36m'
+GRAY='\033[0;37m'
+NOCOLOR='\033[0m'
 
 MONTH=`date "+%Y-%m"`
 DAY=`date "+%Y-%m-%d"`
@@ -8,6 +12,7 @@ cd $FOLDER
 
 FILENAME="stats/$MONTH.txt"
 
+echo "${CLS}Hachink some github stats?...${BLUE}"
 #randomize a bit...
 RND=`echo $RANDOM | cut -c 2`
 if [ "$RND" = "2" ] || [ "$RND" = "5" ] || [ "$RND" = "7" ] 
@@ -22,6 +27,7 @@ then
     echo "Last update was [$UPDATED] and we are [$DAY], need to hack stats ;)" 
     touch $FILENAME 
     echo "stats for $DAY $TIME" >> $FILENAME
+    echo "${GRAY}\c"
     git add .
     git commit -m "stats for $DAY"
     git push
@@ -29,4 +35,5 @@ then
 else
   echo "we won't update this time... ($RND)"
 fi
+echo $NOCOLOR
 
