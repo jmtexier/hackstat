@@ -12,7 +12,7 @@ cd $FOLDER
 
 FILENAME="stats/$MONTH.txt"
 
-echo "${CLS}Hachink some github stats?...${BLUE}"
+echo "${CLS}Hackink some github stats?...${BLUE}"
 #randomize a bit...
 RND=`echo $RANDOM | cut -c 2`
 if [ "$RND" = "2" ] || [ "$RND" = "5" ] || [ "$RND" = "7" ] 
