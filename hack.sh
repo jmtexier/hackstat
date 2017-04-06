@@ -12,7 +12,7 @@ cd $FOLDER
 
 FILENAME="stats/$MONTH.txt"
 
-echo "${CLS}"Okay, should we hack our github stats? ...${BLUE}"
+echo "${CLS}"Okay, should we hack our github stats? ..."${BLUE}"
 #randomize a bit...
 RND=`echo $RANDOM | cut -c 2`
 if [ "$RND" = "2" ] || [ "$RND" = "5" ] || [ "$RND" = "7" ] 
@@ -22,7 +22,7 @@ then
 
   if  [ "$DAY" = "$UPDATED" ]
   then
-    echo "stats already hacked for today"
+    echo "Nope... stats already hacked for today"
   else
     echo "Last update was [$UPDATED] and we are [$DAY], need to hack stats ;)" 
     touch $FILENAME 
@@ -33,7 +33,7 @@ then
     git push
   fi
 else
-  echo "we won't update this time... ($RND)"
+  echo "Nope.. we won't update this time... ($RND)"
 fi
 echo $NOCOLOR
 
