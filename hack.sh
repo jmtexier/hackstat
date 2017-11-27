@@ -25,6 +25,7 @@ then
     echo "Nope... stats already hacked for today"
   else
     echo "Last update was [$UPDATED] and we are [$DAY], need to hack stats ;)" 
+    git pull
     touch $FILENAME 
     echo "stats for $DAY $TIME" >> $FILENAME
     echo "${GRAY}\c"
