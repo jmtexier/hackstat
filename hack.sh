@@ -15,7 +15,8 @@ FILENAME="stats/$MONTH.txt"
 echo "${CLS}Hackink some github stats?...${BLUE}"
 #randomize a bit...
 RND=`echo $RANDOM | cut -c 2`
-if [ "$RND" = "2" ] || [ "$RND" = "5" ] || [ "$RND" = "7" ] 
+UPD=`echo ${RND} | grep -e "[1902]" -c`
+if [ "$UPD" = "1" ]
 then
   #check if file has been already updated today
   UPDATED=`stat -q -n -f "%Sm" -t "%F" $FILENAME`
